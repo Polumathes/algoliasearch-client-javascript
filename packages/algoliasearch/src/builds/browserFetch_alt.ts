@@ -1,4 +1,5 @@
-import { createNullCache } from '@algolia/cache-common';
+import { createBrowserLocalStorageCache } from '@algolia/cache-browser-local-storage';
+import { createFallbackableCache } from '@algolia/cache-common';
 import { createInMemoryCache } from '@algolia/cache-in-memory';
 import {
   ABTest,
@@ -16,7 +17,7 @@ import {
   stopABTest,
   StopABTestResponse,
 } from '@algolia/client-analytics';
-import { destroy, version, WaitablePromise } from '@algolia/client-common';
+import { version, WaitablePromise } from '@algolia/client-common';
 import {
   createRecommendationClient,
   getPersonalizationStrategy,
@@ -73,7 +74,6 @@ import {
   findObject,
   FindObjectOptions,
   FindObjectResponse,
-  generateSecuredApiKey,
   getApiKey,
   GetApiKeyResponse,
   getLogs,
@@ -85,7 +85,6 @@ import {
   GetObjectsOptions,
   GetObjectsResponse,
   getRule,
-  getSecuredApiKeyRemainingValidity,
   getSettings,
   getSynonym,
   getTopUserIDs,
@@ -161,7 +160,6 @@ import {
   searchUserIDs,
   SearchUserIDsOptions,
   SearchUserIDsResponse,
-  SecuredApiKeyRestrictions,
   setSettings,
   SetSettingsResponse,
   Settings,
@@ -172,8 +170,8 @@ import {
   UserIDResponse,
   waitTask,
 } from '@algolia/client-search';
-import { createNullLogger } from '@algolia/logger-common';
-import { Destroyable } from '@algolia/requester-common';
+import { LogLevelEnum } from '@algolia/logger-common';
+import { createConsoleLogger } from '@algolia/logger-console';
 import { createBrowserFetchRequester } from '@algolia/requester-browser-fetch';
 import { createUserAgent, RequestOptions } from '@algolia/transporter';
 
@@ -188,19 +186,21 @@ export default function algoliasearch(
     appId,
     apiKey,
     timeouts: {
-      connect: 2,
-      read: 5,
+      connect: 1,
+      read: 2,
       write: 30,
     },
     requester: createBrowserFetchRequester(),
-    logger: createNullLogger(),
-    responsesCache: createNullCache(),
-    requestsCache: createNullCache(),
-    hostsCache: createInMemoryCache(),
-    userAgent: createUserAgent(version).add({
-      segment: 'Node.js',
-      version: process.versions.node,
+    logger: createConsoleLogger(LogLevelEnum.Error),
+    responsesCache: createInMemoryCache(),
+    requestsCache: createInMemoryCache({ serializable: false }),
+    hostsCache: createFallbackableCache({
+      caches: [
+        createBrowserLocalStorageCache({ key: `${version}-${appId}` }),
+        createInMemoryCache(),
+      ],
     }),
+    userAgent: createUserAgent(version).add({ segment: 'Browser' }),
   };
 
   return createSearchClient({
@@ -214,8 +214,8 @@ export default function algoliasearch(
       multipleQueries,
       copyIndex,
       copySettings,
-      copyRules,
       copySynonyms,
+      copyRules,
       moveIndex,
       listIndices,
       getLogs,
@@ -235,9 +235,6 @@ export default function algoliasearch(
       getTopUserIDs,
       removeUserID,
       hasPendingMappings,
-      generateSecuredApiKey,
-      getSecuredApiKeyRemainingValidity,
-      destroy,
       initIndex: base => (indexName: string): SearchIndex => {
         return initIndex(base)(indexName, {
           methods: {
@@ -352,16 +349,16 @@ export type SearchIndex = BaseSearchIndex & {
     query: string,
     requestOptions?: RequestOptions & SearchOptions
   ) => Readonly<Promise<SearchResponse<TObject>>>;
-  readonly searchForFacetValues: (
-    facetName: string,
-    facetQuery: string,
-    requestOptions?: RequestOptions & SearchOptions
-  ) => Readonly<Promise<SearchForFacetValuesResponse>>;
   readonly findAnswers: <TObject>(
     query: string,
     queryLanguages: readonly string[],
     requestOptions?: RequestOptions & FindAnswersOptions
   ) => Readonly<Promise<FindAnswersResponse<TObject>>>;
+  readonly searchForFacetValues: (
+    facetName: string,
+    facetQuery: string,
+    requestOptions?: RequestOptions & SearchOptions
+  ) => Readonly<Promise<SearchForFacetValuesResponse>>;
   readonly batch: (
     requests: readonly BatchRequest[],
     requestOptions?: RequestOptions
@@ -604,13 +601,8 @@ export type SearchClient = BaseSearchClient & {
   readonly hasPendingMappings: (
     requestOptions?: HasPendingMappingsOptions & RequestOptions
   ) => Readonly<Promise<HasPendingMappingsResponse>>;
-  readonly generateSecuredApiKey: (
-    parentApiKey: string,
-    restrictions: SecuredApiKeyRestrictions
-  ) => string;
-  readonly getSecuredApiKeyRemainingValidity: (securedApiKey: string) => number;
   readonly initAnalytics: (options?: InitAnalyticsOptions) => AnalyticsClient;
   readonly initRecommendation: (options?: InitRecommendationOptions) => RecommendationClient;
-} & Destroyable;
+};
 
 export * from '../types';
