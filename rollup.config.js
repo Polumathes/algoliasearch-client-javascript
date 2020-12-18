@@ -51,7 +51,7 @@ packagesConfig.push({
   external: ['crypto'],
 });
 
-['cache-browser-local-storage', 'requester-browser-xhr'].forEach(packageId => {
+['cache-browser-local-storage', 'requester-browser-xhr', 'requester-browser-fetch'].forEach(packageId => {
   packagesConfig.push({
     output: packageId,
     package: packageId,
@@ -76,9 +76,14 @@ packagesConfig.push({
   formats: ['cjs'],
 });
 
-['browser', 'browserLite'].forEach(build => {
+['browser', 'browserLite', 'browserFetch'].forEach(build => {
+    let output_map = {
+        browser: 'algoliasearch',
+        browserLite: 'algoliasearch-lite',
+        browserFetch: 'algoliasearch-fetch'
+    };
   packagesConfig.push({
-    output: build === 'browser' ? 'algoliasearch' : 'algoliasearch-lite',
+    output: output_map[build],
     package: 'algoliasearch',
     input: `src/builds/${build}.ts`,
     formats: ['esm-browser'],
@@ -86,7 +91,7 @@ packagesConfig.push({
   });
 
   packagesConfig.push({
-    output: build === 'browser' ? 'algoliasearch' : 'algoliasearch-lite',
+    output: output_map[build],
     package: 'algoliasearch',
     input: `src/builds/${build}.ts`,
     formats: ['umd'],
