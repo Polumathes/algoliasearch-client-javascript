@@ -1,4 +1,5 @@
 {
+  "name": "algoliasearch-client-javascript",
   "private": true,
   "license": "MIT",
   "version": "4.8.3",
