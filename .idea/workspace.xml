@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc9e2b7c-391d-4e04-a050-3b7b5ea22444" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/packages/algoliasearch/src/builds/browserFetch.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/algoliasearch/src/builds/browserFetch_alt.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollup.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/rollup.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,23 +21,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="17" />
+          <entry key="js" value="18" />
           <entry key="json" value="14" />
           <entry key="lock" value="2" />
-          <entry key="ts" value="25" />
+          <entry key="ts" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="11" />
-          <entry key="JavaScript" value="17" />
-          <entry key="TypeScript" value="25" />
+          <entry key="JavaScript" value="18" />
+          <entry key="TypeScript" value="26" />
           <entry key="tsconfig" value="3" />
           <entry key="yarn.lock" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
+          <entry key="ESLintLanguageService" value="1" />
           <entry key="TypeScriptServerServiceImpl" value="1" />
         </counts>
       </usages-collector>
@@ -58,11 +60,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rollup.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="39">
-              <caret line="53" column="55" lean-forward="true" selection-start-line="53" selection-start-column="55" selection-end-line="53" selection-end-column="55" />
+            <state relative-caret-position="78">
+              <caret line="82" column="36" selection-start-line="82" selection-start-column="36" selection-end-line="82" selection-end-column="36" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -105,14 +107,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/packages/algoliasearch/src/builds/browserFetch.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="193" column="6" lean-forward="true" selection-start-line="193" selection-start-column="6" selection-end-line="193" selection-end-column="6" />
+              <caret line="193" column="6" selection-start-line="193" selection-start-column="6" selection-end-line="193" selection-end-column="6" />
               <folding>
                 <element signature="e#0#56#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/requester-browser-fetch/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="39">
+              <caret line="1" column="56" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/requester-browser-fetch/src/createBrowserFetchRequester.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -144,24 +164,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lerna.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/requester-browser-xhr/src/createBrowserXhrRequester.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -186,8 +188,8 @@
         <option value="$PROJECT_DIR$/packages/algoliasearch/package.json" />
         <option value="$PROJECT_DIR$/dist/packages/algoliasearch/src/builds/browserFetch.js" />
         <option value="$PROJECT_DIR$/lerna.json" />
-        <option value="$PROJECT_DIR$/rollup.config.js" />
         <option value="$PROJECT_DIR$/packages/algoliasearch/src/builds/browserFetch.ts" />
+        <option value="$PROJECT_DIR$/rollup.config.js" />
       </list>
     </option>
   </component>
@@ -198,6 +200,9 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
@@ -271,6 +276,19 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="types" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="algoliasearch-client-javascript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algoliasearch-client-javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="packages" type="462c0819:PsiDirectoryNode" />
+              <item name="requester-browser-fetch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algoliasearch-client-javascript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algoliasearch-client-javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="packages" type="462c0819:PsiDirectoryNode" />
+              <item name="requester-browser-fetch" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -318,12 +336,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608310653298</updated>
-      <workItem from="1608310654550" duration="9116000" />
+      <workItem from="1608310654550" duration="11110000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9116000" />
+    <option name="totallyTimeSpent" value="11110000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="43" width="1680" height="954" extended-state="0" />
@@ -423,13 +441,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/requester-browser-fetch/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="1" column="56" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/requester-browser-fetch/api-extractor.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -437,13 +448,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="4" column="44" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/requester-browser-fetch/src/createBrowserFetchRequester.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -569,16 +573,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rollup.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="53" column="55" lean-forward="true" selection-start-line="53" selection-start-column="55" selection-end-line="53" selection-end-column="55" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/algoliasearch/src/builds/node.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-7029">
@@ -601,9 +595,33 @@
     <entry file="file://$PROJECT_DIR$/packages/algoliasearch/src/builds/browserFetch.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="193" column="6" lean-forward="true" selection-start-line="193" selection-start-column="6" selection-end-line="193" selection-end-column="6" />
+          <caret line="193" column="6" selection-start-line="193" selection-start-column="6" selection-end-line="193" selection-end-column="6" />
           <folding>
             <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/requester-browser-fetch/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="1" column="56" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/requester-browser-fetch/src/createBrowserFetchRequester.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rollup.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="82" column="36" selection-start-line="82" selection-start-column="36" selection-end-line="82" selection-end-column="36" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
