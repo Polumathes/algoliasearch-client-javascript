@@ -29,7 +29,7 @@ async function build(target) {
   await buildDefinition(target);
 
   if (target === 'algoliasearch') {
-    await buildDefinition('algoliasearch', 'lite');
+    await buildDefinition('algoliasearch', 'fetch');
   }
 
   await fs.remove(path.resolve(`packages/${target}/dist/packages`));
