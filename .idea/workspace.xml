@@ -49,14 +49,14 @@
         <counts>
           <entry key="js" value="245" />
           <entry key="json" value="130" />
-          <entry key="ts" value="882" />
+          <entry key="ts" value="921" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="130" />
           <entry key="JavaScript" value="245" />
-          <entry key="TypeScript" value="882" />
+          <entry key="TypeScript" value="921" />
         </counts>
       </usages-collector>
     </session>
@@ -93,8 +93,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/packages/requester-browser-fetch/src/createBrowserFetchRequester.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+            <state relative-caret-position="-19">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -193,7 +193,7 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="43" />
+    <option name="y" value="40" />
     <option name="width" value="1680" />
     <option name="height" value="954" />
   </component>
@@ -262,6 +262,13 @@
               <item name="algoliasearch-client-javascript" type="462c0819:PsiDirectoryNode" />
               <item name="packages" type="462c0819:PsiDirectoryNode" />
               <item name="requester-browser-fetch" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algoliasearch-client-javascript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algoliasearch-client-javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="packages" type="462c0819:PsiDirectoryNode" />
+              <item name="requester-browser-fetch" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -314,15 +321,15 @@
       <workItem from="1608310654550" duration="12594000" />
       <workItem from="1608562741258" duration="8966000" />
       <workItem from="1608734315526" duration="688000" />
-      <workItem from="1609449768428" duration="1893000" />
+      <workItem from="1609449768428" duration="4695000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24141000" />
+    <option name="totallyTimeSpent" value="26943000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="43" width="1680" height="954" extended-state="0" />
+    <frame x="0" y="40" width="1680" height="954" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25885227" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -603,8 +610,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/packages/requester-browser-fetch/src/createBrowserFetchRequester.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        <state relative-caret-position="-19">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
